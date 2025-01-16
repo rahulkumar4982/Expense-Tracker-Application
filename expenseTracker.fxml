@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.expensetracker.Controller">
+    <children>
+        <ComboBox fx:id="categoryComboBox" layoutX="14.0" layoutY="14.0" />
+        <TextField fx:id="amountTextField" layoutX="14.0" layoutY="45.0" promptText="Amount" />
+        <TextArea fx:id="descriptionTextArea" layoutX="14.0" layoutY="75.0" prefHeight="100.0" prefWidth="200.0" promptText="Description"/>
+        <DatePicker fx:id="dateDatePicker" layoutX="220.0" layoutY="45.0" />
+        
+        <Button fx:id="saveButton" text="Add Expense" layoutX="14.0" layoutY="200.0" onAction="#handleAddExpense" />
+        <Button text="Export to CSV" layoutX="14.0" layoutY="240.0" onAction="#handleExportCSV" />
+        
+        <TableView fx:id="expenseTable" layoutX="220.0" layoutY="100.0" prefWidth="500.0">
+            <columns>
+                <TableColumn fx:id="categoryColumn" text="Category"/>
+                <TableColumn fx:id="amountColumn" text="Amount"/>
+                <TableColumn fx:id="descriptionColumn" text="Description"/>
+                <TableColumn fx:id="dateColumn" text="Date"/>
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>
